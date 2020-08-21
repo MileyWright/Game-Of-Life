@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import "./Grid.css";
 const rows = 25;
 const columns = 25;
 
@@ -14,11 +14,21 @@ const gridMap = () => {
 const Grid = () => {
     const [grid, setGrid] = (useState(gridMap))
     
-
+console.log(grid)
 
     return (
         <div className='grid'>
-            {grid}
+            {grid.map((gridRow, i) => {
+                  return gridRow.map((column, j) => {
+                     return (
+                        <div
+                            className="cell"
+                            key = {`${i}-${j}`}
+                            
+                        />
+                    )
+                  })
+            })}
         </div>
     )
 }
