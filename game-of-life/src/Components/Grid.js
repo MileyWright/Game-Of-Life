@@ -19,16 +19,16 @@ const Grid = () => {
 
     const toggleGrid = ({ i, j}) => {
         setGrid( produce(grid, gridCopy => {
-            gridCopy[i][j] = 1;
+            gridCopy[i][j] = grid[i][j] ? 0 : 1; 
         }))
     }
     
     const toggleCellBackground = ({i, j}) => {
         let toggleBackground = 'cell';
-        if(grid[i][j] === 1){
+        if(grid[i][j] === 1){       // if the grid cells is 1(true) then the cell background is changed when toggled
             return toggleBackground += "toggleBackground";
         } else {
-            return toggleBackground
+            return toggleBackground // 0 (false) ? Then stay default 
         }
     }
     
