@@ -15,7 +15,8 @@ const gridMap = () => {
 }
 
 const Grid = () => {
-    const [grid, setGrid] = (useState(gridMap))
+    const [grid, setGrid] = useState(gridMap);
+    const [running, setRunning] = useState(false);
 
     const toggleGrid = ({ i, j}) => {
         setGrid( produce(grid, gridCopy => {
@@ -31,24 +32,32 @@ const Grid = () => {
             return toggleBackground // 0 (false) ? Then stay default 
         }
     }
+
+    const Start = () => {
+        setRunning(!running);
+        
+    }
     
     console.log(grid)
     return (
-        <div className='grid'>
-            {grid.map((gridRow, i) => {
-                  return gridRow.map((column, j) => {
-                     return (
-                        <div
-                            // className="cell"
-                            key = {`${i}-${j}`}
-                            onClick = {() => toggleGrid({ i ,j })}
-                            className= {toggleCellBackground({i,j})}
+        <>
+            <button onClick = {Start}>{running ? 'Stop' : 'Start'}</button>
+            <div className='grid'>
+                {grid.map((gridRow, i) => {
+                    return gridRow.map((column, j) => {
+                        return (
+                            <div
+                                // className="cell"
+                                key = {`${i}-${j}`}
+                                onClick = {() => toggleGrid({ i ,j })}
+                                className= {toggleCellBackground({i,j})}
 
-                        />
-                    )
-                  })
-            })}
-        </div>
+                            />
+                        )
+                    })
+                })}
+            </div>
+        </>
     )
 }
 
