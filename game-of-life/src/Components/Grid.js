@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef, useCallback} from 'react';
 import produce from 'immer';
 import "./Grid.css";
 
@@ -18,6 +18,9 @@ const Grid = () => {
     const [grid, setGrid] = useState(gridMap);
     const [running, setRunning] = useState(false);
 
+    const runningRef = useRef(running);
+    runningRef.current = running;
+
     const toggleGrid = ({ i, j}) => {
         setGrid( produce(grid, gridCopy => {
             gridCopy[i][j] = grid[i][j] ? 0 : 1; 
@@ -33,15 +36,25 @@ const Grid = () => {
         }
     }
 
-    const Start = () => {
+    const startButton = () => {
         setRunning(!running);
-        
+        if(!running) {
+            runningRef.current = true;
+            runGrid()
+        }
     }
     
+    const runGrid = useCallback(() => {
+        if (!runningRef.current) { // my runningRef will always be up to date in a useCallback
+            return;
+        }
+        setTimeout(runGrid, 1000)
+    }, [])
+
     console.log(grid)
     return (
         <>
-            <button onClick = {Start}>{running ? 'Stop' : 'Start'}</button>
+            <button onClick = {startButton}>{running ? 'Stop' : 'Start'}</button>
             <div className='grid'>
                 {grid.map((gridRow, i) => {
                     return gridRow.map((column, j) => {
