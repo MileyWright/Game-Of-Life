@@ -1,0 +1,38 @@
+.gridContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+    color: white;
+}
+.gridContainer button {
+    width: 110px;
+    background: none;
+    color: goldenrod;
+    height: 30px;
+    border: 1px solid #ffffff;
+    border-radius: 13px;
+    transition: .3s;
+    outline: none;
+    margin: 20px;
+}
+.gridContainer button:hover{
+    border: 1px solid goldenrod;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(25,20px);
+}
+.cell {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #303634;
+    
+}
+.celltoggleBackground {
+    width: 20px;
+    height: 20px;
+    background-color: goldenrod;
+    border: 1px solid #303634;
+}
