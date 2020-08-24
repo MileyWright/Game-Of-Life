@@ -103,6 +103,7 @@ const Grid = () => {
     console.log(grid)
     return (
         <div className='gridContainer'>
+            <h1>Game of Life</h1>
             <div className='buttons'>
                 <button onClick = {startButton}>{running ? 'Stop' : 'Start'}</button>
                 <button onClick = {randomGrid}> Random</button>
@@ -128,8 +129,6 @@ const Grid = () => {
                 <button onClick={() => setPace(1000)}>Slow</button>
                 <button onClick={() => setPace(100)}>Medium</button>
                 <button onClick={() => setPace(50)}>Fast</button>
-                <br/>
-                <button></button>
             </div>
         </div>
     )

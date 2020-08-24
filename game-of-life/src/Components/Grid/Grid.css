@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 4%;
+    margin: 1%;
     color: white;
 }
 .gridContainer button {
@@ -15,7 +15,7 @@
     border-radius: 13px;
     transition: .3s;
     outline: none;
-    margin: 30px;
+    margin: 20px;
 }
 .gridContainer button:hover{
     border: 1px solid goldenrod;
