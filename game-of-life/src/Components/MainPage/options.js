@@ -1,5 +1,6 @@
 import React from 'react';
 import useDarkMode from '../hooks/useDarkMode';
+import {Link} from 'react-router-dom';
 import './MainPage.css';
 
 const Options = () => {
@@ -18,7 +19,15 @@ const Options = () => {
                         {darkMode ? 'Light Mode' : 'Dark Mode'}
                     </button>
             </div>
+            <div className='link'>
+                <Link to='/'>
+                    <button className='back'>
+                        Back
+                    </button>
+                </Link>
+            </div>
         </div>
+        
     )
 }
 

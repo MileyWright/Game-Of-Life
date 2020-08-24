@@ -37,3 +37,55 @@
 .options{
     color: white;
 }
+.dark-mode .links button {
+    color: #000000;
+    background: linear-gradient(to right, goldenrod 50%, white 50%);
+    background-size: 201% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    outline: none;
+    border: 1px solid white;
+}
+.dark-mode .links button:hover {
+    background-position: left bottom;
+    border: 1px solid white;
+
+}
+.link {
+    display: flex;
+    justify-content: flex-end;
+}
+.link button {
+    font-size: 2.3rem;
+    margin-bottom: 8%;
+    padding: 5px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 500;
+    background: none;
+    color: #ffffff;
+    border: 1px solid black;
+    border-radius: 9px;
+    background: linear-gradient(to right, goldenrod 50%, black 50%);
+    background-size: 201% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    outline: none;
+}
+.link button:hover {
+    background-position: left bottom;
+    border: 1px solid black;
+}
+.dark-mode .link button {
+    color: #000000;
+    background: linear-gradient(to right, goldenrod 50%, white 50%);
+    background-size: 201% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    outline: none;
+    border: 1px solid white;
+}
+
+.dark-mode .link button:hover {
+    background-position: left bottom;
+    border: 1px solid white;
+}
