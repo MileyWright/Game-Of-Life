@@ -3,6 +3,7 @@ import {Route} from 'react-router-dom';
 import './App.css';
 import Grid from './Components/Grid/Grid';
 import MainPage from './Components/MainPage/MainPage';
+
 function App() {
   return (
     <div className="App">

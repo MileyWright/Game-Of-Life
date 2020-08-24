@@ -4,9 +4,9 @@ import './MainPage.css';
 const MainPage = () => {
 
     return (
-        <>
-        Hey There
-        </>
+        <div className='mainContainer'>
+            <h1>Game of Life</h1>
+        </div>
     )
 }
 
