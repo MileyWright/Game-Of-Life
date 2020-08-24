@@ -91,12 +91,20 @@ const Grid = () => {
     const clearGrid = () => {
         setGrid(gridMap)
     };
-
+    
+    const randomGrid = () => {
+        const gridRow = [];
+        for(let i = 0; i < rows; i++){
+            gridRow.push(Array.from(Array(columns), () => (Math.random() > 0.7 ? 1 : 0))) //creates my array that instead starts as all 0's(like above), randomizes 0's and 1's throughout the grid 
+        }
+        return setGrid(gridRow);
+    }
     console.log(grid)
     return (
         <div className='gridContainer'>
             <div className='buttons'>
                 <button onClick = {startButton}>{running ? 'Stop' : 'Start'}</button>
+                <button onClick = {randomGrid}> Random</button>
                 <button onClick = {clearGrid}> Clear</button>
             </div>
             <div className='grid'>
@@ -114,6 +122,13 @@ const Grid = () => {
                     })
                 })}
                
+            </div>
+            <div className='bottom-buttons'>
+                <button></button>
+                <button></button>
+                <button></button>
+                <br/>
+                <button></button>
             </div>
         </div>
     )
