@@ -15,7 +15,7 @@ const gridMap = () => {
 }
 
 const neighborCell = [
-    [0, 1],
+    [0, 1], 
     [0, -1],
     [1, -1],
     [-1, 1],
@@ -94,9 +94,11 @@ const Grid = () => {
 
     console.log(grid)
     return (
-        <>
-            <button onClick = {startButton}>{running ? 'Stop' : 'Start'}</button>
-            <button onClick = {clearGrid}> Clear</button>
+        <div className='gridContainer'>
+            <div className='buttons'>
+                <button onClick = {startButton}>{running ? 'Stop' : 'Start'}</button>
+                <button onClick = {clearGrid}> Clear</button>
+            </div>
             <div className='grid'>
                 {grid.map((gridRow, i) => {
                     return gridRow.map((column, j) => {
@@ -112,7 +114,7 @@ const Grid = () => {
                     })
                 })}
             </div>
-        </>
+        </div>
     )
 }
 

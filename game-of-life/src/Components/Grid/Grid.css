@@ -1,3 +1,11 @@
+.gridContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.gridContainer button {
+    width: 130px;
+}
 .grid {
     display: grid;
     grid-template-columns: repeat(25,20px);
