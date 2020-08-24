@@ -8,7 +8,7 @@ const MainPage = () => {
         <div className='mainContainer'>
             <h1 className='title'>Game of Life</h1>
             <div className='links'>
-                <Link to='game-of-life'>
+                <Link to='play'>
                     <button>
                         Play
                     </button>
