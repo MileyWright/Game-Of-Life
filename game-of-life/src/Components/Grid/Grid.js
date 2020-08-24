@@ -103,7 +103,7 @@ const Grid = () => {
     console.log(grid)
     return (
         <div className='gridContainer'>
-            <h1>Game of Life</h1>
+            <h1 className='header'>Game of Life</h1>
             <div className='buttons'>
                 <button onClick = {startButton}>{running ? 'Stop' : 'Start'}</button>
                 <button onClick = {randomGrid}> Random</button>
