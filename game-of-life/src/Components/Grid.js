@@ -14,6 +14,17 @@ const gridMap = () => {
     return gridRow;
 }
 
+const neighborCell = [
+    [0, 1],
+    [0, -1],
+    [1, -1],
+    [-1, 1],
+    [1, 1],
+    [-1, -1],
+    [1, 0],
+    [-1, 0]
+];
+
 const Grid = () => {
     const [grid, setGrid] = useState(gridMap);
     const [running, setRunning] = useState(false);
@@ -48,6 +59,32 @@ const Grid = () => {
         if (!runningRef.current) { // my runningRef will always be up to date in a useCallback
             return;
         }
+        setGrid((grid) => {
+            return produce(grid, gridCopy => {
+                for (let i = 0; i < rows; i++) {
+                    for (let j = 0; j < columns; j++) {
+                        let neighbors = 0;
+                        neighborCell.forEach(([x,y]) => {
+                            const newI = i + x;
+                            const newJ = j + y;
+                            if(
+                                newI >= 0 && newI < rows &&
+                                newJ >= 0 && newJ < columns //checking to see if we haven't gone above or below our grid
+                            ) {
+                                neighbors += grid[newI][newJ]
+                            }
+                        })
+
+                        if(neighbors < 2 || neighbors > 3) {
+                            gridCopy[i][j] = 0;
+                        } else if (grid[i][j] === 0 && neighbors === 3) {
+                            gridCopy[i][j] = 1;
+                        }
+                    }
+                }
+            })
+        })
+       
         setTimeout(runGrid, 1000)
     }, [])
 
