@@ -6,6 +6,9 @@
     margin: 1%;
     color: white;
 }
+.dark-mode .gridContainer {
+    color: goldenrod;
+}
 .gridContainer button {
     width: 110px;
     background: none;
@@ -16,6 +19,10 @@
     transition: .3s;
     outline: none;
     margin: 20px;
+}
+.dark-mode .gridContainer button {
+    border: 1px solid black;
+
 }
 .gridContainer button:hover{
     border: 1px solid goldenrod;

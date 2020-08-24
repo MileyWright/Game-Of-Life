@@ -4,7 +4,7 @@ import './App.css';
 import Grid from './Components/Grid/Grid';
 import MainPage from './Components/MainPage/MainPage';
 import Options from './Components/MainPage/options';
-
+ import './index.css';
 function App() {
   return (
     <div className="App">
