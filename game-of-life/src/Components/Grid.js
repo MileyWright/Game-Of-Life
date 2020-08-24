@@ -75,7 +75,7 @@ const Grid = () => {
                             }
                         })
 
-                        if(neighbors < 2 || neighbors > 3) {
+                        if(neighbors < 2 || neighbors > 3) { //Rules: if the neighbor is less than 2 or greater than 3 the cell dies
                             gridCopy[i][j] = 0;
                         } else if (grid[i][j] === 0 && neighbors === 3) {
                             gridCopy[i][j] = 1;
@@ -88,10 +88,15 @@ const Grid = () => {
         setTimeout(runGrid, 1000)
     }, [])
 
+    const clearGrid = () => {
+        setGrid(gridMap)
+    };
+
     console.log(grid)
     return (
         <>
             <button onClick = {startButton}>{running ? 'Stop' : 'Start'}</button>
+            <button onClick = {clearGrid}> Clear</button>
             <div className='grid'>
                 {grid.map((gridRow, i) => {
                     return gridRow.map((column, j) => {
