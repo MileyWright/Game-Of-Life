@@ -28,6 +28,7 @@ const neighborCell = [
 const Grid = () => {
     const [grid, setGrid] = useState(gridMap);
     const [running, setRunning] = useState(false);
+    const [pace, setPace] = useState(100);
 
     const runningRef = useRef(running);
     runningRef.current = running;
@@ -85,8 +86,8 @@ const Grid = () => {
             })
         })
        
-        setTimeout(runGrid, 1000)
-    }, [])
+        setTimeout(runGrid, pace)
+    }, [pace])
 
     const clearGrid = () => {
         setGrid(gridMap)
@@ -124,9 +125,9 @@ const Grid = () => {
                
             </div>
             <div className='bottom-buttons'>
-                <button></button>
-                <button></button>
-                <button></button>
+                <button onClick={() => setPace(1000)}>Slow</button>
+                <button onClick={() => setPace(100)}>Medium</button>
+                <button onClick={() => setPace(50)}>Fast</button>
                 <br/>
                 <button></button>
             </div>
