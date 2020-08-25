@@ -27,6 +27,7 @@
     border-radius: 50%;
     border: 2px solid #ffffff;
     font-family: "Source Sans Pro", sans-serif;
+    cursor: pointer;
 }
 .gridContainer .close button:hover {
     border: 2px solid goldenrod;
@@ -43,6 +44,7 @@
     margin: 20px;
     font-family: "Source Sans Pro", sans-serif;
     font-size: 1.1rem;
+    cursor: pointer;
 }
 .dark-mode .gridContainer button {
     border: 2px solid black;
@@ -59,11 +61,12 @@
     width: 20px;
     height: 20px;
     border: 1px solid #303634;
-    
+    cursor: pointer;
 }
 .celltoggleBackground {
     width: 20px;
     height: 20px;
     background-color: goldenrod;
     border: 1px solid #303634;
+    cursor: pointer;
 }

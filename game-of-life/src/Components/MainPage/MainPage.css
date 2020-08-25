@@ -32,12 +32,11 @@
     background-position: right bottom;
     transition: all .5s ease-out;
     outline: none;
-  
+    cursor: pointer;
 }
 .links button:hover {
     background-position: left bottom;
     border: 1px solid black;
-
 }
 .options{
     color: white;
@@ -75,6 +74,7 @@
     background-position: right bottom;
     transition: all .5s ease-out;
     outline: none;
+    cursor: pointer;
 }
 .link button:hover {
     background-position: left bottom;
