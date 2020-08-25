@@ -13,7 +13,7 @@ const MainPage = () => {
                         Play
                     </button>
                 </Link>
-                <Link to='instructions'>
+                <Link to='rules'>
                     <button>
                         Instructions
                     </button>

@@ -1,5 +1,6 @@
 import React, {useState, useRef, useCallback} from 'react';
 import produce from 'immer';
+import {Link} from 'react-router-dom';
 import "./Grid.css";
 
 
@@ -103,6 +104,11 @@ const Grid = () => {
     console.log(grid)
     return (
         <div className='gridContainer'>
+            <div className='close'>
+                <Link to='/'>
+                    <button>x</button>
+                </Link>
+            </div>
             <h1 className='header'>Game of Life</h1>
             <div className='buttons'>
                 <button onClick = {startButton}>{running ? 'Stop' : 'Start'}</button>
