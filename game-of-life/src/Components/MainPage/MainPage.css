@@ -1,0 +1,123 @@
+.mainContainer {
+    color: #ffffff;
+    /* font-family: "Source Sans Pro", sans-serif; */
+
+}
+.dark-mode .mainContainer{
+    color: #000000;
+}
+.title {
+    font-family: 'Dancing Script', cursive;
+	font-size:9.6rem;
+	color: goldenrod;
+}
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.links button {
+    font-size: 4.3rem;
+    margin-bottom: 8%;
+    padding: 5px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 500;
+    background: none;
+    color: #ffffff;
+    border: 1px solid black;
+    border-radius: 9px;
+    background: linear-gradient(to right, goldenrod 50%, black 50%);
+    background-size: 201% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    outline: none;
+  
+}
+.links button:hover {
+    background-position: left bottom;
+    border: 1px solid black;
+
+}
+.options{
+    color: white;
+}
+.dark-mode .links button {
+    color: #000000;
+    background: linear-gradient(to right, goldenrod 50%, white 50%);
+    background-size: 201% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    outline: none;
+    border: 1px solid white;
+}
+.dark-mode .links button:hover {
+    background-position: left bottom;
+    border: 1px solid white;
+
+}
+.link {
+    display: flex;
+    justify-content: flex-end;
+}
+.link button {
+    font-size: 2.3rem;
+    margin-bottom: 8%;
+    padding: 5px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 500;
+    background: none;
+    color: #ffffff;
+    border: 1px solid black;
+    border-radius: 9px;
+    background: linear-gradient(to right, goldenrod 50%, black 50%);
+    background-size: 201% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    outline: none;
+}
+.link button:hover {
+    background-position: left bottom;
+    border: 1px solid black;
+}
+.dark-mode .link button {
+    color: #000000;
+    background: linear-gradient(to right, goldenrod 50%, white 50%);
+    background-size: 201% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    outline: none;
+    border: 1px solid white;
+}
+
+.dark-mode .link button:hover {
+    background-position: left bottom;
+    border: 1px solid white;
+}
+.mainContainer .rules {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.mainContainer .rules h1 {
+    text-align: center;
+}
+.mainContainer .rules li {
+    padding-left:10%;
+}
+.mainContainer .about {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.mainContainer .about p {
+    padding-left: 10px;
+    
+}
+.mainContainer .about p a {
+    color: goldenrod;
+}

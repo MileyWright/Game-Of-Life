@@ -3,22 +3,53 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1%;
     color: white;
+}
+.dark-mode .gridContainer {
+    color: goldenrod;
+}
+.gridContainer .header {
+    font-family: 'Dancing Script', cursive;
+	font-size:3.6rem;
+    color: goldenrod;
+    height: 40px;
+}
+.gridContainer .close {
+    display: flex;
+    justify-content: flex-end !important;
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    width: 500px;
+}
+.gridContainer .close button {
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    font-family: "Source Sans Pro", sans-serif;
+}
+.gridContainer .close button:hover {
+    border: 2px solid goldenrod;
 }
 .gridContainer button {
     width: 110px;
     background: none;
     color: goldenrod;
     height: 30px;
-    border: 1px solid #ffffff;
+    border: 2px solid #ffffff;
     border-radius: 13px;
     transition: .3s;
     outline: none;
     margin: 20px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.1rem;
+}
+.dark-mode .gridContainer button {
+    border: 2px solid black;
+    font-weight: 600;
 }
 .gridContainer button:hover{
-    border: 1px solid goldenrod;
+    border: 2px solid goldenrod;
 }
 .grid {
     display: grid;
