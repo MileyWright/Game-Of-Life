@@ -121,3 +121,24 @@
 .mainContainer .about p a {
     color: goldenrod;
 }
+@media only screen and (max-width: 730px) {
+    .mainContainer .title { 
+        text-align: center;
+        font-size: 5.4rem;
+    }
+    .links button {
+        font-size: 2.5rem;
+    }
+    .link {
+        padding-right: 100px;
+    }
+    .link button{
+        font-size: 2.0rem;
+    }
+    .rules li {
+        
+    }
+    .about p{
+        width: 500px;
+    }
+}
