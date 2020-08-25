@@ -123,7 +123,6 @@
 }
 @media only screen and (max-width: 730px) {
     .mainContainer .title { 
-        width: 500px;
         text-align: center;
         font-size: 5.4rem;
     }
@@ -135,5 +134,11 @@
     }
     .link button{
         font-size: 2.0rem;
+    }
+    .rules li {
+        
+    }
+    .about p{
+        width: 500px;
     }
 }
