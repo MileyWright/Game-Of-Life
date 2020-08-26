@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom';
 import "./Grid.css";
 
 
-const rows = 25;
-const columns = 25; //going to make these more dynamic. Users should be able to place how big or small they want the grid. 
+const rows = 30;
+const columns = 30; //going to make these more dynamic. Users should be able to place how big or small they want the grid. 
 
 const gridMap = () => {
     const gridRow = [];
