@@ -55,7 +55,7 @@
 }
 .grid {
     display: grid;
-    grid-template-columns: repeat(25,20px);
+    grid-template-columns: repeat(30,20px);
 }
 .cell {
     width: 20px;
