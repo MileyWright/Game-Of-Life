@@ -101,7 +101,7 @@ const Grid = () => {
         }
         return setGrid(gridRow);
     }
-    console.log(grid)
+    
     return (
         <div className='gridContainer'>
             <div className='close'>
