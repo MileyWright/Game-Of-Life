@@ -70,3 +70,18 @@
     border: 1px solid #303634;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 620px) {
+    .gridContainer .grid{
+        grid-template-columns: repeat(30,15px);
+    }
+    .cell {
+        width: 15px;
+        height: 15px;
+    }
+    .celltoggleBackground {
+        width: 15px;
+        height: 15px;
+
+    }
+} 

@@ -126,6 +126,12 @@
         text-align: center;
         font-size: 5.4rem;
     }
+    .mainContainer .rules {
+        width: 100%;
+    }
+    .mainContainer .about {
+        width: 100%;
+    }
     .links button {
         font-size: 2.5rem;
     }
@@ -140,5 +146,21 @@
     }
     .about p{
         width: 500px;
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    .mainContainer {
+        width: 100%;
+    }
+    .mainContainer .rules {
+        width: 100%;
+    }
+    .mainContainer .about {
+        
+        width: 100%;
+    }
+    .mainContainer .about p {
+        width: 95%;
     }
 }
